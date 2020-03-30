@@ -66,7 +66,5 @@ describe('Authentication', () => {
 
         expect(response.body).toHaveProperty('token');
     });
-
-
 })
 
