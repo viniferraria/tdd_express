@@ -8,11 +8,11 @@ it('should encrypt user password', async () => {
     beforeEach(async() => await truncate());
 
     const user = await User.create({
-        name: 'vini2312312',
-        email: 'vini@mailasdasdsa.com',
+        name: 'viniteste1',
+        email: 'viniteste@teste.com',
         password: '123456'
     });
 
-    const compareHash = await bcrypt.compare(user.password_hash, user.password_hash);
+    const compareHash = await bcrypt.compare('123456', user.password_hash);
     expect(compareHash).toBe(true);
 })

@@ -20,5 +20,4 @@ class AppController {
     }
 }
 
-
 module.exports = new AppController().express;
