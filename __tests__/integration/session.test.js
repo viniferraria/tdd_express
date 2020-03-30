@@ -1,4 +1,4 @@
-const { User } = require('../../src/app/models/User');
+const { User } = require('../../src/app/models');
 
 describe('Authentication', () => {
     it('should authenticate', async () =>{
