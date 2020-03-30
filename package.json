@@ -1,25 +1,25 @@
 {
-    "name": "tdd_express",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "start": "node src/server.js",
-      "dev": "nodemon -r esm src/server.js --ignore __tests__",
-      "test": "jest"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "dotenv": "^8.2.0",
-      "esm": "^3.2.25",
-      "express": "^4.17.1",
-      "pg": "^7.18.2",
-      "sequelize": "^5.21.5"
-    },
-    "devDependencies": {
-      "jest": "^25.2.3",
-      "sequelize-cli": "^5.5.1"
-    }
+  "name": "tdd_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon -r esm src/server.js --ignore __tests__",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "pg": "^7.18.2",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "jest": "^25.2.3",
+    "sequelize-cli": "^5.5.1"
   }
-  
+}
