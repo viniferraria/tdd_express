@@ -1,19 +1,18 @@
-import { User } from '../../src/app/models';
-import bcrypt from 'bcryptjs';
-import truncate from '../utils/truncate';
+const { User } = require('../../src/app/models');
+const bcrypt = require('bcryptjs');
+const truncate = require('../utils/truncate');
 
 describe( 'User', () => beforeEach(async () => await truncate()) );
 
 it('should encrypt user password', async () => {
+    beforeEach(async() => await truncate());
 
     const user = await User.create({
-        name: 'vini',
-        email: 'vini@mail.com',
+        name: 'vini2312312',
+        email: 'vini@mailasdasdsa.com',
         password: '123456'
     });
 
-    const hash = await bcrypt.hash('123456', 8);
-    await bcrypt.compare('123456', user.password);
-    
-    expect().toBe(true);
+    const compareHash = await bcrypt.compare(user.password_hash, user.password_hash);
+    expect(compareHash).toBe(true);
 })

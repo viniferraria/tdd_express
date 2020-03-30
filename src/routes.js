@@ -1,9 +1,9 @@
 const routes = require("express").Router();
-import { User } from './app/models';
-import SessionController from './app/controllers/SessionController';
+const { User } = require('./app/models');
+const SessionController = require('./app/controllers/SessionController');
 
-routes.post('/sessions', SessionController);
+routes.post('/sessions', SessionController.store);
 
-// User.create({name: 'vini123', email: 'teste123@123123', password_hash: '123123'});
+User.create({name: 'vini123', email: 'teste123@123123', password_hash: '123123'});
 console.log(User);
-export default routes;
+module.exports = routes;

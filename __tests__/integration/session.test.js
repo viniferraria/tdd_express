@@ -2,11 +2,11 @@ const request = require('supertest');
 
 const app = require('../../src/app');
 const { User } = require('../../src/app/models');
-import truncate from '../utils/truncate';
+const truncate = require('../utils/truncate');
 
 
 describe('Authentication', () => {
-    beforeEach( async() => await truncate );
+    beforeEach(async() => await truncate());
 
     it('should authenticate', async () =>{
         const user = await User.create({
@@ -14,8 +14,6 @@ describe('Authentication', () => {
             email: "teste@teste.teste",
             password: "121231232131231232313"
         });
-
-        console.log(user);
 
         const response = await request(app)
         .post('/sessions')
@@ -48,7 +46,7 @@ describe('Authentication', () => {
         // expect(user.email).toBe("teste@teste.teste");
     });
 
-    it('should return jwt token when authneticated', async () => {
+    it('should return jwt token when authenticated', async () => {
         const user = await User.create({
             name: "viniteste",
             email: "teste@teste.teste",
